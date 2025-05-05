@@ -292,7 +292,7 @@ namespace UnityEngine.XR.Content.Interaction
         {
             if (m_Manager == null)
             {
-                m_Manager = FindObjectOfType<LocomotionManager>(true);
+                m_Manager = FindFirstObjectByType<LocomotionManager>(FindObjectsInactive.Include);
                 if (m_Manager == null)
                 {
                     Debug.LogError($"Reference to the {nameof(LocomotionManager)} is not set or the object has been destroyed," +
